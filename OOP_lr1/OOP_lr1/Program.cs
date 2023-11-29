@@ -10,69 +10,69 @@ using c = System.Console;
  */
 static void FillTypes()
 {
-    Console.Write("Enter value of int: ");
-    int intValue = int.Parse(Console.ReadLine());
-    Console.WriteLine("int: " + intValue);
+    c.Write("Enter value of int: ");
+    int intValue = int.Parse(c.ReadLine());
+    c.WriteLine("int: " + intValue);
 
-    Console.Write("Enter value of uint: ");
-    uint uintValue = uint.Parse(Console.ReadLine());
-    Console.WriteLine("uint: " + uintValue);
+    c.Write("Enter value of uint: ");
+    uint uintValue = uint.Parse(c.ReadLine());
+    c.WriteLine("uint: " + uintValue);
 
-    Console.Write("Enter value of nint: ");
-    nint nintValue = nint.Parse(Console.ReadLine());
-    Console.WriteLine("nint: " + nintValue);
+    c.Write("Enter value of nint: ");
+    nint nintValue = nint.Parse(c.ReadLine());
+    c.WriteLine("nint: " + nintValue);
 
-    Console.Write("Enter value of nuint: ");
-    nuint nuintValue = nuint.Parse(Console.ReadLine());
-    Console.WriteLine("nuint: " + nuintValue);
+    c.Write("Enter value of nuint: ");
+    nuint nuintValue = nuint.Parse(c.ReadLine());
+    c.WriteLine("nuint: " + nuintValue);
 
-    Console.Write("Enter value of short: ");
-    short shortValue = short.Parse(Console.ReadLine());
-    Console.WriteLine("short: " + shortValue);
+    c.Write("Enter value of short: ");
+    short shortValue = short.Parse(c.ReadLine());
+    c.WriteLine("short: " + shortValue);
 
-    Console.Write("Enter value of ushort: ");
-    ushort ushortValue = ushort.Parse(Console.ReadLine());
-    Console.WriteLine("ushort: " + ushortValue);
+    c.Write("Enter value of ushort: ");
+    ushort ushortValue = ushort.Parse(c.ReadLine());
+    c.WriteLine("ushort: " + ushortValue);
 
-    Console.Write("Enter value of long: ");
-    long longValue = long.Parse(Console.ReadLine());
-    Console.WriteLine("long: " + longValue);
+    c.Write("Enter value of long: ");
+    long longValue = long.Parse(c.ReadLine());
+    c.WriteLine("long: " + longValue);
 
-    Console.Write("Enter value of ulong: ");
-    ulong ulongValue = ulong.Parse(Console.ReadLine());
-    Console.WriteLine("ulong: " + ulongValue);
+    c.Write("Enter value of ulong: ");
+    ulong ulongValue = ulong.Parse(c.ReadLine());
+    c.WriteLine("ulong: " + ulongValue);
 
-    Console.Write("Enter value of byte: ");
-    byte byteValue = byte.Parse(Console.ReadLine());
-    Console.WriteLine("byte: " + byteValue);
+    c.Write("Enter value of byte: ");
+    byte byteValue = byte.Parse(c.ReadLine());
+    c.WriteLine("byte: " + byteValue);
 
-    Console.Write("Enter value of sbyte: ");
-    sbyte sbyteValue = sbyte.Parse(Console.ReadLine());
-    Console.WriteLine("sbyte: " + sbyteValue);
+    c.Write("Enter value of sbyte: ");
+    sbyte sbyteValue = sbyte.Parse(c.ReadLine());
+    c.WriteLine("sbyte: " + sbyteValue);
 
-    Console.Write("Enter value of float: ");
-    float floatValue = float.Parse(Console.ReadLine());
-    Console.WriteLine("float: " + floatValue);
+    c.Write("Enter value of float: ");
+    float floatValue = float.Parse(c.ReadLine());
+    c.WriteLine("float: " + floatValue);
 
-    Console.Write("Enter value of double: ");
-    double doubleValue = double.Parse(Console.ReadLine());
-    Console.WriteLine("double: " + doubleValue);
+    c.Write("Enter value of double: ");
+    double doubleValue = double.Parse(c.ReadLine());
+    c.WriteLine("double: " + doubleValue);
 
-    Console.Write("Enter value of decimal: ");
-    decimal decimalValue = decimal.Parse(Console.ReadLine());
-    Console.WriteLine("decimal: " + decimalValue);
+    c.Write("Enter value of decimal: ");
+    decimal decimalValue = decimal.Parse(c.ReadLine());
+    c.WriteLine("decimal: " + decimalValue);
 
-    Console.Write("Enter value of char: ");
-    char charValue = char.Parse(Console.ReadLine());
-    Console.WriteLine("char: " + charValue);
+    c.Write("Enter value of char: ");
+    char charValue = char.Parse(c.ReadLine());
+    c.WriteLine("char: " + charValue);
 
-    Console.Write("Enter value of bool (True or False): ");
-    bool boolValue = bool.Parse(Console.ReadLine());
-    Console.WriteLine("bool: " + boolValue);
+    c.Write("Enter value of bool (True or False): ");
+    bool boolValue = bool.Parse(c.ReadLine());
+    c.WriteLine("bool: " + boolValue);
 
-    Console.Write("Enter str: ");
-    string stringValue = Console.ReadLine();
-    Console.WriteLine("string: " + stringValue);
+    c.Write("Enter str: ");
+    string stringValue = c.ReadLine();
+    c.WriteLine("string: " + stringValue);
 }
 FillTypes();
 
