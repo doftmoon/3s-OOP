@@ -1,118 +1,140 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Security.Cryptography.X509Certificates;
 using c = System.Console;
 
-interface IFigure
+class Student
 {
-    void Print();
-}
+    public static int id;
+    public string SecondName;
+    public string FirstName;
+    public string LastName;
+    public string date;
+    public string address;
+    public string pulpit;
+    public short course;
+    public string univ;
 
-class Rectangle : IFigure
-{
-    public int x;
-    public int y;
-    private int h;
-    private int l;
-    private string? color;
+    static Student() { }
 
-    public Rectangle() { }
-
-    public Rectangle(int x, int y, int h)
+    public Student(string secondName, string firstName, string lastName, string date, string address, string pulpit, short course, string univ)
     {
-        this.x = x;
-        this.y = y;
-        this.h = h;
+        SecondName = secondName;
+        FirstName = firstName;
+        LastName = lastName;
+        this.date = date;
+        this.address = address;
+        this.pulpit = pulpit;
+        this.course = course;
+        this.univ = univ;
     }
 
-    public Rectangle(int x, int y, int h, int l, string color)
+    public int GetAge(int id)
     {
-        this.x = x;
-        this.y = y;
-        this.h = h;
-        this.l = l;
-        this.color = color;
+      //  return 
     }
 
-    public void Print()
+    public override void ToString()
     {
-        c.WriteLine($"Rectangle: x={x}, y={y}, h={h}, l={l}, color={color}");
-    }
-
-    public override string ToString()
-    {
-        return base.ToString();
-    }
-
-    public static Rectangle operator +(Rectangle rectangle, int value)
-    {
-        rectangle.x += value;
-        rectangle.y += value;
-        return rectangle;
-    }
-
-    public int Calculate()
-    {
-        return h * l;
+        
+      //  return c.WriteLine("To string in Student");
     }
 }
 
+//2
+abstract class Pleant
+{
+    public string pName;
+    public string pType;
+
+    public Pleant(string pName, string pType)
+    {
+        this.pName = pName;
+        this.pType = pType;
+    }
+
+    protected Pleant(string pName)
+    {
+        this.pName = pName;
+    }
+
+    public abstract void GetMsg(string msg);
+}
+
+class Tree : Pleant
+{
+    public string tName;
+    public string tType;
+    public int tAge;
+
+    //public Tree(int tAge)
+    //{
+
+    //    this.tAge = tAge;
+    //}
+
+    public override void GetMsg(string msg)
+    {
+        c.Write((string)msg);
+    }
+}
+
+internal class Flower : Pleant
+{
+    public int fLength;
+
+    public Flower(string pName, string pType) : base(pName, pType)
+    {
+    }
+
+    public override void GetMsg(string msg)
+    {
+        c.Write((string)msg);
+    }
+
+    public static Flower operator +(Flower fLength, int length)
+    {
+        return fLength + length;
+    }
+}
+
+class Rose : Flower
+{
+    public string fColor;
+
+    public Rose(string pName, string pType) : base(pName, pType)
+    {
+    }
+}
+
+
+
+//3
+class NewsChannel
+{
+    
+
+    public void News()
+    {
+        c.Write("News");
+    }
+}
+
+class Sub
+{
+    public void ReadNews()
+    {
+        c.Write("I read");
+    }
+}
+
+
+
+//realise
 class Program
 {
     static void Main()
-    {
-        List<Rectangle> rectangles = new List<Rectangle>
-        {
-            new Rectangle(0, 0, 10, 20, "red"),
-            new Rectangle(1, 1, 15, 25, "blue"),
-            new Rectangle(2, 2, 12, 22, "green"),
-            new Rectangle(3, 3, 18, 28, "yellow"),
-            new Rectangle(4, 4, 8, 18, "orange"),
-            new Rectangle(5, 5, 14, 24, "purple")
-        };
+    {//
+       // char[] justarr = new char("gsg", "gsgsg", "gaga");
 
-        Console.WriteLine("Original List:");
-        foreach (var rectangle in rectangles)
-        {
-            rectangle.Print();
-        }
-
-        Console.WriteLine();
-        Console.WriteLine("List after adding 5 to width and height using operator +:");
-
-        List<Rectangle> updatedRectangles = new List<Rectangle>();
-
-        foreach (var rectangle in rectangles)
-        {
-            Rectangle updatedRectangle = rectangle + 5;
-            updatedRectangles.Add(updatedRectangle);
-            updatedRectangle.Print();
-        }
-
-        rectangles = updatedRectangles;
-
-        var sortedRectangles = rectangles.OrderBy(r => r.x)
-                                          .ThenBy(r => r.y)
-                                          .ThenBy(r => r.Calculate())
-                                          .ToList();
-
-        // Вывод первого и последнего объектов
-        if (sortedRectangles.Count > 0)
-        {
-            Console.WriteLine("First Object:");
-            Console.WriteLine(sortedRectangles.First());
-
-            Console.WriteLine();
-
-            Console.WriteLine("Last Object:");
-            Console.WriteLine(sortedRectangles.Last());
-        }
-        else
-        {
-            Console.WriteLine("List is empty");
-        }
-
-        foreach (var rectangle in sortedRectangles)
-        {
-            rectangle.Print();
-        }
+      //  var ourQuery = justarr.Where
     }
 }
